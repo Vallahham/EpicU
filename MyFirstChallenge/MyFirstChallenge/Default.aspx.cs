@@ -19,7 +19,7 @@ namespace MyFirstChallenge
             string age = ageTextBox.Text;
             string money = moneyTextBox.Text;
 
-            string result = "At " + age + " years old, you should probably have more than " + money + " in your pocket.";
+            string result = "At " + age + " years old, you should probably have more than $" + money + " in your pocket.";
             resultLabel.Text = result;
 
         }
