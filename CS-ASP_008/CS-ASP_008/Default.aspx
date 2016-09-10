@@ -10,7 +10,15 @@
     <form id="form1" runat="server">
     <div>
     
+        <asp:TextBox ID="inputTextBox" runat="server"></asp:TextBox>
+        <br />
+        <br />
+    
     </div>
+        <asp:Button ID="okButton_Click" runat="server" OnClick="okButton_Click_Click" Text="Go" />
+        <br />
+        <br />
+        <asp:Label ID="resultLabel" runat="server" EnableViewState="False" Text="[resultLabel]"></asp:Label>
     </form>
 </body>
 </html>
