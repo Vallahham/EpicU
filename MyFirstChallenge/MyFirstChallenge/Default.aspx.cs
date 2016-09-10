@@ -13,5 +13,15 @@ namespace MyFirstChallenge
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string age = ageTextBox.Text;
+            string money = moneyTextBox.Text;
+
+            string result = "At " + age + " years old, you should probably have more than " + money + " in your pocket.";
+            resultLabel.Text = result;
+
+        }
     }
 }
