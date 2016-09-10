@@ -14,7 +14,7 @@ namespace MyFirstWebApp
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void OK_Click(object sender, EventArgs e)
         {
             string firstName = firstNameTextBox.Text;
             string lastName = lastNameTextBox.Text;
@@ -23,14 +23,5 @@ namespace MyFirstWebApp
             resultLabel.Text = result;
         }
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

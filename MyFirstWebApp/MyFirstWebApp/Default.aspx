@@ -11,14 +11,14 @@
     <div>
     
         What is your first name?&nbsp;&nbsp;
-        <asp:TextBox ID="firstNameTextBox" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+        <asp:TextBox ID="firstNameTextBox" runat="server"></asp:TextBox>
         <br />
         <br />
         What is yout last name?&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="lastNameTextBox" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
+        <asp:TextBox ID="lastNameTextBox" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Click Me" />
+        <asp:Button ID="Button1" runat="server" OnClick="OK_Click" Text="Click Me" />
         <br />
         <br />
         <asp:Label ID="resultLabel" runat="server"></asp:Label>
