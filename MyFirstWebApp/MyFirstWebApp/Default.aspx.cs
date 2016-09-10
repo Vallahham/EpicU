@@ -19,7 +19,7 @@ namespace MyFirstWebApp
             string firstName = firstNameTextBox.Text;
             string lastName = lastNameTextBox.Text;
 
-            string result = "Hello" + firstName + " " + lastName;
+            string result = "Hello " + firstName + " " + lastName;
             resultLabel.Text = result;
         }
 
