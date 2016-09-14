@@ -34,11 +34,26 @@ namespace CS_ASP_008
 
             resultLabel.Text = j.ToString();
              */
+            /*
+                        string i = inputTextBox.Text;
+                        int j = int.Parse(i);               //-------What is parse??
+                        int k = j + 1;
+                        resultLabel.Text = k.ToString();
+                        */
 
-            string i = inputTextBox.Text;
-            int j = int.Parse(i);               //-------What is parse??
-            int k = j + 1;
-            resultLabel.Text = k.ToString();
+
+            //CS-ASP _009
+
+            int firstNumber = 200000000;
+            int secondNumber = 200000000;
+            long resultNumber = firstNumber * secondNumber;
+
+            checked                                 //Gives room to override
+            {
+                resultNumber = firstNumber * secondNumber;
+            }
+
+            resultLabel.Text = resultNumber.ToString();
 
         }
     }
