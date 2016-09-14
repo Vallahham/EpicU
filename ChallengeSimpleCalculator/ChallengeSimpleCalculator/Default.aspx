@@ -32,8 +32,11 @@
         <br />
         <br />
         <asp:Button ID="multiplication_Button" runat="server" OnClick="multiplication_Button_Click" style="width: 19px" Text="*" />
+        &nbsp;
         <asp:Button ID="division_Button" runat="server" OnClick="division_Button_Click" Text="/" />
+        &nbsp;
         <asp:Button ID="addition_Button" runat="server" Text="+" OnClick="addition_Button_Click" />
+        &nbsp;
         <asp:Button ID="subtraction_Button" runat="server" Text="-" OnClick="subtraction_Button_Click" />
         <br />
         <br />
