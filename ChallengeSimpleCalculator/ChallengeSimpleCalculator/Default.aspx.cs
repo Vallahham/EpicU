@@ -13,5 +13,46 @@ namespace ChallengeSimpleCalculator
         {
 
         }
+
+        protected void multiplication_Button_Click(object sender, EventArgs e)
+        {
+            double firstNum = double.Parse(firstNumberTextBox.Text);
+            double secondNum = double.Parse(secondNumberTextBox.Text);
+ 
+            double result = firstNum* secondNum;
+            resultLabel.Text = result.ToString();
+        }
+
+        protected void division_Button_Click(object sender, EventArgs e)
+        {
+            double firstNum = double.Parse(firstNumberTextBox.Text);
+            double secondNum = double.Parse(secondNumberTextBox.Text);
+
+            double result = firstNum / secondNum;
+            resultLabel.Text = result.ToString();
+
+            if (secondNum == 0)
+            {
+                resultLabel.Text = "Cannot divide by zero";
+            }
+        }
+
+        protected void addition_Button_Click(object sender, EventArgs e)
+        {
+            double firstNum = double.Parse(firstNumberTextBox.Text);
+            double secondNum = double.Parse(secondNumberTextBox.Text);
+
+            double result = firstNum + secondNum;
+            resultLabel.Text = result.ToString();
+        }
+
+        protected void subtraction_Button_Click(object sender, EventArgs e)
+        {
+            double firstNum = double.Parse(firstNumberTextBox.Text);
+            double secondNum = double.Parse(secondNumberTextBox.Text);
+
+            double result = firstNum - secondNum;
+            resultLabel.Text = result.ToString();
+        }
     }
 }
