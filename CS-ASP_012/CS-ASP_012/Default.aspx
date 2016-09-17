@@ -10,6 +10,20 @@
     <form id="form1" runat="server">
     <div>
     
+        Is
+        <asp:TextBox ID="firstTextBox" runat="server"></asp:TextBox>
+&nbsp;equal to
+        <asp:TextBox ID="secondTextBox" runat="server"></asp:TextBox>
+        ?<br />
+        <br />
+        <asp:CheckBox ID="CheckBox" runat="server" Text="Are you old?" />
+        <br />
+        <br />
+        <asp:Button ID="OKButton_Click" runat="server" OnClick="Button1_Click" Text="OK" />
+        <br />
+        <br />
+        <asp:Label ID="resultLabel" runat="server"></asp:Label>
+    
     </div>
     </form>
 </body>

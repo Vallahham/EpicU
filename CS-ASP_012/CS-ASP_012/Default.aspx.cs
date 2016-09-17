@@ -13,5 +13,14 @@ namespace CS_ASP_012
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+            resultLabel.Text = (CheckBox.Checked);
+            ? "I'm teaching an old dog new tricks!";
+            : "Young whippernapper! Get off my lawn!";
+
+        }
     }
 }
