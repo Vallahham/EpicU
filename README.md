@@ -185,6 +185,29 @@ AND fractional values representing
 myTimeSpan.TotalDays // double
 myTimeSpan.TotalHours // double
 
+Formatting Strings (CS-ASP_019)
+---------------------------------------
+Concatenate Strings
++ +=
+
+Format Strings
+String.Format("Hello {0}", You are from {1}", "Bob", "Chicago")
+
+Format Numbers
+String.Format("Reference Code: {0:000_000-0}", 1234567)
+Output: 123_456-7
+
+Formatting Dates
+http://is.gd/formattingdates
+String.Format("Reference Date: {0:ddd - d, MM, YYY}", someDate)
+Output: Tue - 5, 07, 2014
+
+Formatting Currency
+http://is.gd/formattingcurrency
+
+String.Format("Total: {0:C}", totalAmount);
+$50,000,.00
+
 
 
 
