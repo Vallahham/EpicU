@@ -13,5 +13,21 @@ namespace CS_ASP_015
         {
 
         }
+
+        protected void okButton_Click(object sender, EventArgs e)
+        {
+            // http://is.gd/timespan
+            // Days.Hours:Minutes:Second.Milliseconds
+
+            TimeSpan myTimeSpan = TimeSpan.Parse("1.2:3:30.5");
+
+            DateTime myBirthday = DateTime.Parse("07/05/1995");
+            TimeSpan myAge = DateTime.Now.Subtract(myBirthday);
+
+            resultLabel.Text = myAge.Hours.ToString();
+
+            resultLabel.Text = myAge.TotalDays.ToString();
+
+        }
     }
 }
