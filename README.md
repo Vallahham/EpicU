@@ -82,3 +82,29 @@ Whitespace is ignored (used for humans)
 
 http://421-violette.vm.epicservers.com/SimpleCalc/
 
+Conditional if... else if ... else Statement (CS-ASP_011)
+-----------------------------------------------------------
+
+= Assignments
+== Equality
+
+if(a == b)
+{
+  // execute when the expression is true
+}
+else
+{
+  // execute when the expression is false
+}
+
+... or ... evaluate other mutually exclusively options:
+
+if (a == b) { //some code}
+else if (a == c) { //some code}
+else if (a == d) { //some code}
+else { //catch all}
+
+** Not Equal - !=
+
+
+
