@@ -10,7 +10,18 @@
     <form id="form1" runat="server">
     <div>
     
+        <asp:TextBox ID="TextBox" runat="server"></asp:TextBox>
+        <br />
+        <br />
+    
     </div>
+        <asp:Calendar ID="Calendar" runat="server"></asp:Calendar>
+        <br />
+        <br />
+        <asp:Button ID="okButton" runat="server" OnClick="okButton_Click" Text="OK" />
+        <br />
+        <br />
+        <asp:Label ID="resultLabel" runat="server"></asp:Label>
     </form>
 </body>
 </html>

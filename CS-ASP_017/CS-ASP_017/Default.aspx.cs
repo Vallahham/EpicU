@@ -11,7 +11,16 @@ namespace CS_ASP_017
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)               //Runs one time as opposed to every time an event happens  (Page.IsPostBack)
+            {                                              
+                TextBox.Text = "SomeValue";
+                Calendar.SelectedDate = DateTime.Now.Date.AddDays(2);
+            }
+        }
 
+        protected void okButton_Click(object sender, EventArgs e)
+        {
+            resultLabel.Text = TextBox.Text + " - " + Calendar.SelectedDate.ToShortDateString();
         }
     }
 }
