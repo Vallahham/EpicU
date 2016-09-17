@@ -104,7 +104,19 @@ else if (a == c) { //some code}
 else if (a == d) { //some code}
 else { //catch all}
 
+CheckBox Server Control = Checked prop is bool
+
+RadioButton Server Control = GropupName prop groups
+them together, check prop is bool
+
 ** Not Equal - !=
+
+
+Conditional Ternary Operator (CS-ASP_012)
+-----------------------------------------
+Shortcut for evaluatating an expression and 
+returning a result
+result = (a == b) ? "Equal" : "Not Equal";
 
 
 
