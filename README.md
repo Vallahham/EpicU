@@ -118,5 +118,25 @@ Shortcut for evaluatating an expression and
 returning a result
 result = (a == b) ? "Equal" : "Not Equal";
 
+Comparison and Logical Operator (CS-ASP_013)
+--------------------------------------------------
+Comparison Operators
+used for conditional statements
+==
+!=
+< >
+<= >=
+!someBooleanValue - means NOT is true
+
+Logical Operators
+used to combine multiple expressions / evaluation
+
+&& - AND
+|| - OR
+
+Combine with parenthesis ( ) for order of precedence
+
+
+
 
 
