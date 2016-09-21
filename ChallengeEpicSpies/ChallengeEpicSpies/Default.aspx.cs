@@ -25,16 +25,20 @@ namespace ChallengeEpicSpies
             return total;
         }
 
+        public void resetCalendars()
+        {
+            previousEndCalendar.SelectedDate = DateTime.Now.Date;
+
+            startCalendar.SelectedDate = DateTime.Now.AddDays(daysBetweenJobs).Date;
+
+            endCalendar.SelectedDate = DateTime.Now.AddDays(daysBetweenJobs + week).Date;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
-                previousEndCalendar.SelectedDate = DateTime.Now.Date;
-
-                startCalendar.SelectedDate = DateTime.Now.AddDays(daysBetweenJobs).Date;
-
-                endCalendar.SelectedDate = DateTime.Now.AddDays(daysBetweenJobs + week).Date;
-
+                resetCalendars();
             }
         }
 
@@ -48,12 +52,18 @@ namespace ChallengeEpicSpies
             double jobDuration = endCalendar.SelectedDate
                 .Subtract(startCalendar.SelectedDate)
                 .TotalDays;
+
             
             if (selectedDaysBetweenJobs < daysBetweenJobs)
             {
                 resultLabel.Text = "Error: Please allow at least " + daysBetweenJobs 
                     + " days between the previous assignment and new assignment.";
-                startCalendar.SelectedDate = DateTime.Now.AddDays(daysBetweenJobs).Date;
+                resetCalendars();
+            }
+            if (jobDuration < 1)
+            {
+                resultLabel.Text = "Error: Please allow at least one day for mission completion.";
+                resetCalendars();
             }
             else
             {
