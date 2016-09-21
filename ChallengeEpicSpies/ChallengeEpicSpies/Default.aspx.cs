@@ -24,15 +24,16 @@ namespace ChallengeEpicSpies
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
-            // int myInteger = int.Parse(myString);
-            double selectedDaysBetweenJobs = previousEndCalendar.SelectedDate
-                .Subtract(startCalendar.SelectedDate)
+            double selectedDaysBetweenJobs = startCalendar.SelectedDate
+                .Subtract(previousEndCalendar.SelectedDate)
                 .TotalDays;
-
+            
             if (selectedDaysBetweenJobs < daysBetweenJobs)
             {
-                resultLabel.Text = "There must be at least " + daysBetweenJobs + " days between assignments. Please select a further date";
-}
+                resultLabel.Text = "There must be at least " + daysBetweenJobs 
+                    + " days between assignments. Please select a further date.";
+                startCalendar.SelectedDate = DateTime.Now.AddDays(daysBetweenJobs).Date;
             }
+        }
     }
 }
