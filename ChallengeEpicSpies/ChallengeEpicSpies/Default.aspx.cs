@@ -27,6 +27,6 @@ namespace ChallengeEpicSpies
             {
                 resultLabel.Text = "There must be at least " + daysBetweenJobs + " days between assignments. Please select a further date"
 }
-        }
+            }
     }
 }
