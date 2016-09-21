@@ -40,6 +40,7 @@ namespace ChallengeEpicSpies
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
+
             double selectedDaysBetweenJobs = startCalendar.SelectedDate
                 .Subtract(previousEndCalendar.SelectedDate)
                 .TotalDays;
@@ -56,7 +57,8 @@ namespace ChallengeEpicSpies
             }
             else
             {
-                resultLabel.Text = "Budget total: " + costCalculation(jobDuration);
+                resultLabel.Text = "Agent " + spyNameTextBox.Text + " is now assigned to mission '"
+                    + assignmentNameTextBox.Text + "'. Budget total: $" + costCalculation(jobDuration);
             }
         }
     }
