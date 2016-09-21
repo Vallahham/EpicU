@@ -52,15 +52,14 @@ namespace ChallengeEpicSpies
             double jobDuration = endCalendar.SelectedDate
                 .Subtract(startCalendar.SelectedDate)
                 .TotalDays;
-
-            
+         
             if (selectedDaysBetweenJobs < daysBetweenJobs)
             {
                 resultLabel.Text = "Error: Please allow at least " + daysBetweenJobs 
                     + " days between the previous assignment and new assignment.";
                 resetCalendars();
             }
-            if (jobDuration < 1)
+            else if (jobDuration < 1)
             {
                 resultLabel.Text = "Error: Please allow at least one day for mission completion.";
                 resetCalendars();
@@ -69,7 +68,7 @@ namespace ChallengeEpicSpies
             {
                 resultLabel.Text = "Agent " + spyNameTextBox.Text + " is now assigned to mission '"
                     + assignmentNameTextBox.Text + "'. Budget total: $" + costCalculation(jobDuration);
-            }
+            } 
         }
     }
 }
