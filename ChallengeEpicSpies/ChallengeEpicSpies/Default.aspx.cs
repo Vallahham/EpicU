@@ -9,16 +9,21 @@ namespace ChallengeEpicSpies
 {
     public partial class Default : System.Web.UI.Page
     {
+        int daysBetweenJobs = 14;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                previousEndCalendar.SelectedDate = DateTime.Now.Date;
 
+                startCalendar.SelectedDate = DateTime.Now.AddDays(daysBetweenJobs).Date;
+
+            }
         }
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
-            DateTime previousEndDate = DateTime.Now.Date;
             
-           // DateTime selecte
         }
     }
 }

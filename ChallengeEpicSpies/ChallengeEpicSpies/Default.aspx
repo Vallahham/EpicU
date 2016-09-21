@@ -9,11 +9,16 @@
         .auto-style1 {
             font-size: x-large;
         }
+        .auto-style2 {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
+    
+        <div class="auto-style2">
     
         <asp:Image ID="Image1" runat="server" Height="190px" ImageUrl="~/epic-spies-logo.jpg" Width="129px" />
         <br />
@@ -28,22 +33,35 @@
         New Assignment Name:
         <asp:TextBox ID="assignmentNameTextBox" runat="server"></asp:TextBox>
         <br />
+        </div>
+        <div class="auto-style2">
+            <br />
+            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        End Date of Previous Assignment</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Calendar ID="previousEndCalendar" runat="server" style="margin-left: 0px"></asp:Calendar>
         <br />
-        End Date of Previous Assignment<asp:Calendar ID="previousEndCalendar" runat="server"></asp:Calendar>
+        <br />
+        Start Date of New Assignment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Calendar ID="startCalendar" runat="server"></asp:Calendar>
         <br />
         <br />
-        Start Date of New Assignment<asp:Calendar ID="startCalendar" runat="server"></asp:Calendar>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
         <br />
+        &nbsp;
         Projected End Date of New Assignment<asp:Calendar ID="endCalendar" runat="server"></asp:Calendar>
         <br />
         <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="submitButton" runat="server" OnClick="submitButton_Click" Text="Submit" />
         <br />
         <br />
-        <asp:Label ID="resultLabel" runat="server"></asp:Label>
     
     </div>
+        <p style="text-align: center">
+        <asp:Label ID="resultLabel" runat="server"></asp:Label>
+    
+        </p>
     </form>
 </body>
 </html>
