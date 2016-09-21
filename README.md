@@ -210,4 +210,30 @@ $50,000,.00
 
 http://421-violette.vm.epicservers.com/EpicSpies/
 
+Sinbgle Dimensional Arrays (CS-ASP_021)
+-------------------------------------------
+Indexes vs. Elements
+Accessor vs. Stored Values
+Indexes are zero based
+
+Declaring Arrays
+string[] myArray = new string[3];
+
+Declaring and Initializing Arrays
+string[] myArray = new string[3] {"Moe", "Larry", "Curly", "Shemp"}
+
+Setting / Getting Values
+string myString = myArray[1]; // Retrieves second element
+myArray[0] = myString; //Sets first element of the array
+
+Multi-Dimensional Arrays (CS-ASP_022)
+----------------------------------------------
+Same as single dimensional.... just requires
+more indexes (in dimensions) to get the element
+
+double[,] myArray = new double[2, 3]; // contains 6 elements
+int[,,] rubicsCube = new int[3,3,3] // contains 27 elements
+
+rubicsCube[0,1,2] = 42;
+myInteger = rubicsCube[0,1,2];
 
