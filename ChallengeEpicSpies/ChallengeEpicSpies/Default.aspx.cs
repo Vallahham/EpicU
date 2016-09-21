@@ -12,6 +12,19 @@ namespace ChallengeEpicSpies
         int daysBetweenJobs = 14;
         int week = 7;
 
+        public double costCalculation(double days)
+        {
+            double costPerDay = 500;
+            double overtime = 1000;
+            double total = costPerDay * days;
+
+            if (days > (3 * week))
+            {
+                total += overtime;
+            }
+            return total;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -33,9 +46,13 @@ namespace ChallengeEpicSpies
             
             if (selectedDaysBetweenJobs < daysBetweenJobs)
             {
-                resultLabel.Text = "There must be at least " + daysBetweenJobs 
-                    + " days between assignments. Please select a different date.";
+                resultLabel.Text = "Error: Please allow at least " + daysBetweenJobs 
+                    + " days between the previous assignment and new assignment.";
                 startCalendar.SelectedDate = DateTime.Now.AddDays(daysBetweenJobs).Date;
+            }
+            else
+            {
+                resultLabel.Text = costCalculation(selectedDaysBetweenJobs);
             }
         }
     }
