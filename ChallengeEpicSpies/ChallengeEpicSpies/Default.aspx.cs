@@ -23,7 +23,10 @@ namespace ChallengeEpicSpies
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
-            
+            if (startCalendar.SelectedDate < daysBetweenJobs)
+            {
+                resultLabel.Text = "There must be at least " + daysBetweenJobs + " days between assignments. Please select a further date"
+}
         }
     }
 }
