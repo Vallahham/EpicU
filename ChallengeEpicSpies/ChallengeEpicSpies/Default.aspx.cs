@@ -10,6 +10,7 @@ namespace ChallengeEpicSpies
     public partial class Default : System.Web.UI.Page
     {
         int daysBetweenJobs = 14;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -23,9 +24,14 @@ namespace ChallengeEpicSpies
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
-            if (startCalendar.SelectedDate < daysBetweenJobs)
+            // int myInteger = int.Parse(myString);
+            double selectedDaysBetweenJobs = previousEndCalendar.SelectedDate
+                .Subtract(startCalendar.SelectedDate)
+                .TotalDays;
+
+            if (selectedDaysBetweenJobs < daysBetweenJobs)
             {
-                resultLabel.Text = "There must be at least " + daysBetweenJobs + " days between assignments. Please select a further date"
+                resultLabel.Text = "There must be at least " + daysBetweenJobs + " days between assignments. Please select a further date";
 }
             }
     }
