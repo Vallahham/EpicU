@@ -43,6 +43,10 @@ namespace ChallengeEpicSpies
             double selectedDaysBetweenJobs = startCalendar.SelectedDate
                 .Subtract(previousEndCalendar.SelectedDate)
                 .TotalDays;
+
+            double jobDuration = endCalendar.SelectedDate
+                .Subtract(startCalendar.SelectedDate)
+                .TotalDays;
             
             if (selectedDaysBetweenJobs < daysBetweenJobs)
             {
@@ -52,7 +56,7 @@ namespace ChallengeEpicSpies
             }
             else
             {
-                resultLabel.Text = costCalculation(selectedDaysBetweenJobs);
+                resultLabel.Text = "Budget total: " + costCalculation(jobDuration);
             }
         }
     }
