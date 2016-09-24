@@ -16,37 +16,30 @@ namespace CS_ASP_028
 
         protected void cupsRadio_CheckedChanged(object sender, EventArgs e)
         {
-            if (quantityTextBox.Text.Trim().Length == 0)
-                return;
-
-            double quantity = 0.0;
-            if (!Double.TryParse(quantityTextBox.Text, out quantity))
-                return;
-
-            resultLabel.Text = "The number of cups: " + quantity.ToString();
+            calculateCups(1.0, "cups");
         }
 
         protected void fromPintsRadio_CheckedChanged(object sender, EventArgs e)
         {
-            calculateCups();
+            calculateCups(2.0, "pints");
         }
 
         protected void fromQuartsRadio_CheckedChanged(object sender, EventArgs e)
         {
-            calculateCups();
+            calculateCups(4.0, "quarts");
         }
 
         protected void fromGallonsRadio_CheckedChanged(object sender, EventArgs e)
         {
-            calculateCups();
+            calculateCups(16.0, "gallons");
         }
 
         protected void quantityTextBox_TextChanged(object sender, EventArgs e)
         {
-            calculateCups();
+            //calculateCups();
         }
 
-        private void calculateCups()
+        private void calculateCups(double measureToCupRatio, string measureName)
         {
             if (quantityTextBox.Text.Trim().Length == 0)
                 return;
@@ -55,14 +48,9 @@ namespace CS_ASP_028
             if (!Double.TryParse(quantityTextBox.Text, out quantity))
                 return;
 
-            double cups = 0.0;
+            double cups = quantity = measureToCupRatio;
 
-            if (fromCupsRadio.Checked) cups = quantity;
-            else if (fromPintsRadio.Checked) cups = quantity * 2;
-            else if (fromQuartsRadio.Checked) cups = quantity * 4;
-            else if (fromGallonsRadio.Checked)cups = quantity * 16;
-
-            resultLabel.Text = "The number of cups: " + cups.ToString();
+            resultLabel.Text = String.Format("{0} {1} is equal to {2} cups", quantity, measureName, measureToCupRatio);
         }
     }
 }
