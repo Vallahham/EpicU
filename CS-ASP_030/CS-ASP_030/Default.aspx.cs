@@ -44,9 +44,10 @@ namespace CS_ASP_030
             resultLabel.Text += "<hr /><p>Round begins ...</p>";
         }
 
+        Random random = new Random();   //Random seed only created once and will give better random numbers
         private int performAttack(int defenderHealth, int attackerDamageMax, string attackerName, string defenderName )
         {
-            Random random = new Random();
+            //Random random = new Random(); 
             int damage = random.Next(1, attackerDamageMax);
             defenderHealth -= damage;
 
