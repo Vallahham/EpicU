@@ -16,17 +16,40 @@ namespace CS_ASP_025
 
         protected void addButton_Click(object sender, EventArgs e)
         {
-            
-            if (firstCheckBox.Checked)
+            /* 
+             if (firstCheckBox.Checked)                     //Deeply nesting
+             {
+                 if (secondCheckBox.Checked)
+                 {
+                     if (thirdCheckBox.Checked)
+                     {
+                         resultLabel.Text = "They're all checked!";
+                     }
+                 }
+             }
+             */
+
+            /*
+            if (firstCheckBox.Checked) return;              // Option to avoid deeply nested code
+            if (secondCheckBox.Checked) return;
+            if (thirdCheckBox.Checked) return;
+            resultLabel.Text = "They're all checked!";
+            */
+
+            if (firstCheckBox.Checked &&                    // Another option
+                secondCheckBox.Checked && 
+                thirdCheckBox.Checked)
+                resultLabel.Text = "They're all checked!";
+
+            /*
+            var checkboxes = new[] {a,b,c};
+
+            if(checkboxes.All (c => c.Checked)        //Link method to avoid repeating code. Purism. (checked)
             {
-                if (secondCheckBox.Checked)
-                {
-                    if (thirdCheckBox.Checked)
-                    {
-                        resultLabel.Text = "They're all checked!";
-                    }
-                }
+
             }
+            */
+
         }
     }
 }
