@@ -27,6 +27,8 @@ namespace CS_ASP_031
                 heroHealth = performAttack(heroHealth, 20, "Monster", "Hero");
                 monsterHealth = performAttack(monsterHealth, 20, "Hero", "Monster");
 
+
+
                 
             }
 
@@ -45,7 +47,7 @@ namespace CS_ASP_031
             resultLabel.Text += "<hr /><p>Round begins ...</p>";
         }
 
-        private int performAttack(int defenderHealth, int attackerDamageMax, string attackerName, string defenderName)
+        private int performAttack(int defenderHealth, int attackerDamageMax, string attackerName, string defenderName, double criticalHitCHance = .1) //optional perameer at the end after required
         {
             Random random = new Random();
             int damage = random.Next(1, attackerDamageMax);
@@ -74,17 +76,17 @@ namespace CS_ASP_031
         }
 
 
-        public void displayFullStatsOfTheMonster(string monsterName, int health, int damageMaximum, double criticalHitChance)
+        public void displayMonsterStats(string monsterName, int health, int damageMaximum, double criticalHitChance)
         {
             resultLabel.Text += String.Format("<p>{0} Current Stats<br />Health: {1}<br />Damage Max: {2}<br />Critical Hit Chance: {3:P}</p>", monsterName, health, damageMaximum, criticalHitChance);
         }
 
-        public void displayMonstersPartialStats(string monsterName, int health, int damageMaximum)
+        public void displayMonsterStats(string monsterName, int health, int damageMaximum)
         {
             resultLabel.Text += String.Format("<p>{0} Current Stats<br />Health: {1}<br />Damage Max: {2}</p>", monsterName, health, damageMaximum);
         }
 
-        public void displayMonstersNameAndHealth(string monsterName, int health)
+        public void displayMonsterStats(string monsterName, int health)
         {
             resultLabel.Text += String.Format("<p>{0} Current Stats<br />Health: {1}</p>", monsterName, health);
         }
