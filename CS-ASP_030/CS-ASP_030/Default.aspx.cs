@@ -17,12 +17,15 @@ namespace CS_ASP_030
             displayBattleHeader();
 
             // Hero gets bonus first attack 
+            monsterHealth = performAttack(monsterHealth, 20, "Hero", "Monster");
 
             while (heroHealth > 0 && monsterHealth > 0)
             {
                 displayRoundHeader();
 
                 // Perform battle here!
+                heroHealth = performAttack(heroHealth, 20, "Monster", "Hero");
+                monsterHealth = performAttack(monsterHealth, 20, "Hero", "Monster");
 
             }
 
@@ -39,6 +42,17 @@ namespace CS_ASP_030
         private void displayRoundHeader()
         {
             resultLabel.Text += "<hr /><p>Round begins ...</p>";
+        }
+
+        private int performAttack(int defenderHealth, int attackerDamageMax, string attackerName, string defenderName )
+        {
+            Random random = new Random();
+            int damage = random.Next(1, attackerDamageMax);
+            defenderHealth -= damage;
+
+            describeRound(attackerName, defenderName, defenderHealth);
+
+            return defenderHealth;
         }
 
         private void describeRound(string attackerName, string defenderName, int defenderHealth)
