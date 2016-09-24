@@ -43,7 +43,7 @@ namespace CS_ASP_028
 
         protected void quantityTextBox_TextChanged(object sender, EventArgs e)
         {
-            // ?  Right now, this doens't work!
+            calculateCups();
         }
 
         private void calculateCups()
