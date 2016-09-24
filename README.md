@@ -237,3 +237,26 @@ int[,,] rubicsCube = new int[3,3,3] // contains 27 elements
 rubicsCube[0,1,2] = 42;
 myInteger = rubicsCube[0,1,2];
 
+Changning the Length of an Array (CS-ASP_023)
+-------------------------------------------------------
+Arrays are Immutable - Cannot be changed in memory
+HOWEVER the .NET Framework provides helper methods to
+resize and array.... creates a new array and copies
+the old values into it.
+
+Array.Resize(ref myArray, myArray.Length + 1);
+
+// Get the highest index:
+int highestIndex = myArray.GetUpperBound(0);
+// 0 - dimention we want to retrieve the
+// upper boundary for
+
+// Arrays have other helper methods
+myArray.Sum()
+myArray.Min()
+myArray.Max()
+myArray.Average()
+myArray.Sort()
+myArray.Reverse()
+
+
