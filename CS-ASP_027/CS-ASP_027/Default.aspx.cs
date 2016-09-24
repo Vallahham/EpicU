@@ -27,8 +27,34 @@ namespace CS_ASP_027
                 monsterHealth);
 
 
-            // Need battle logic here!
+            // Need battle logic here!                      
+            /*
+            while (heroHealth > 0 && monsterHealth > 0)
+            {
+                int heroDamage = random.Next(1, 10);
+                int monsterDamage = random.Next(1, 20);
 
+                monsterHealth -= heroDamage;
+                heroHealth -= monsterDamage;
+
+
+            }
+            */
+
+            //Executes code at least once before checking while condition
+
+            do
+            {
+                int heroDamage = random.Next(1, 10);
+                int monsterDamage = random.Next(1, 20);
+
+                monsterHealth -= heroDamage;
+                heroHealth -= monsterDamage;
+
+                result += "<br />Round: " + round;
+
+
+            } while (heroHealth > 0 && monsterHealth > 0);
 
             if (heroHealth > 0)
             {
