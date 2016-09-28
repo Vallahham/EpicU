@@ -13,5 +13,10 @@ namespace ChallengePostalCalculator
         {
 
         }
+
+        protected void groundRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
