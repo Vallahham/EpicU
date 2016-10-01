@@ -18,9 +18,6 @@ namespace CS_ASP_038
             Car myOtherCar = myCar;
             myCar = null;               //Clearing address of reference to the object myCar
             myOtherCar = null;          // Beacause of these codes, object on line 14 ( Car mycar ) will be deleted since it is not connected to any reference
-
-
-
         }
     }
 }
