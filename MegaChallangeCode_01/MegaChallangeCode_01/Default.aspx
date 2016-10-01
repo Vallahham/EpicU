@@ -15,12 +15,12 @@
     <form id="form1" runat="server">
     <div class="auto-style1">
     
-        <asp:Image ID="Image1" runat="server" Height="180px" Width="180px" />
-        <asp:Image ID="Image2" runat="server" Height="180px" Width="180px" />
-        <asp:Image ID="Image3" runat="server" Height="180px" Width="180px" />
+        <asp:Image ID="slot1Image" runat="server" Height="150px" ImageUrl="~/Images/Seven.png" Width="150px" />
+        <asp:Image ID="slot2Image" runat="server" Height="150px" ImageUrl="~/Images/HorseShoe.png" Width="150px" />
+        <asp:Image ID="slot3Image" runat="server" Height="150px" ImageUrl="~/Images/Seven.png" Width="150px" />
         <br />
         <br />
-        Your Bet:
+        Your Bet: 
         <asp:TextBox ID="betTextBox" runat="server"></asp:TextBox>
         <br />
         <br />

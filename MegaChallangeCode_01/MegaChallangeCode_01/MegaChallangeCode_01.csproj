@@ -108,6 +108,18 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Bar.png" />
+    <Content Include="Images\Bell.png" />
+    <Content Include="Images\Cherry.png" />
+    <Content Include="Images\Clover.png" />
+    <Content Include="Images\Diamond.png" />
+    <Content Include="Images\HorseShoe.png" />
+    <Content Include="Images\Lemon.png" />
+    <Content Include="Images\Orange.png" />
+    <Content Include="Images\Plum.png" />
+    <Content Include="Images\Seven.png" />
+    <Content Include="Images\Strawberry.png" />
+    <Content Include="Images\Watermellon.png" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Web.config" />
