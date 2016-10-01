@@ -363,3 +363,17 @@ private bool myMethod(string myRequiredParam,
                       
 int myValue = 0;
 if (myMethod("Some required text", out myValue)) return "Hello World!";
+
+
+**************
+
+
+Introduction to Classes and Objects (CS-ASP_036)
+-----------------------------------------------------
+Class is a code block that defines a data type.
+An object is an instance of a class.
+Metaphors:
+Blueprint vs. Houses
+Recipe vs. Cupcakes
+Pattern vs. 
+
