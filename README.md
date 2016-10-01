@@ -375,5 +375,58 @@ An object is an instance of a class.
 Metaphors:
 Blueprint vs. Houses
 Recipe vs. Cupcakes
-Pattern vs. 
+Pattern vs. ***************
+
+Creating Class Files, Creating Cohesive Classes and Code Navigation (CS-ASP_037)
+------------------------------------------------------------------------------------
+Prefer more classes w/ narrowly defined responsibilities
+Prefer to put each class in it's own file
+Prefer high cohesion - similarity/ singleness of purpose of he class members
+To achieve high cohesion, a rule of thumb: try to make your classes fit on one
+"screen" of your IDE (no scrolling required)
+
+Understanding Object References and Object Lifetime (CS-ASP_038)
+-------------------------------------------------------------------
+An object reference variable holds a reference to an instantiated object
+in the computer's memory.
+
+MyClass my Object;
+
+The new keyword creates an instance of the class and returns the address of
+object in memory to the reference variable.
+
+myObject = new MyClass();
+
+More than one object reference variable can hold an address to the object in memory.
+
+MyClass myOtherObjectReference = myObject;
+
+Each time a new reference is added, the reference count increases by one. Each time
+and object reference variable goes out of scope or is set to null, the reference
+count decreases by one.
+
+If the reference count is zero, the .NET Framework Runtime's Garbage Collector
+removes the object from memory at an indeterminate point in the time in the future. You
+can take control of the finalization process and even handle events just before the
+object is removed. See: "deterministic finalization".
+
+Understanding the .NET Framework and Compilation (CS-ASP_039)
+-------------------------------------------------------------------
+The .NET Framework consists of:
+
+- Runtime (Common Language Runtimre, CLR) "protective bubble", manages memory,
+protects the user's machine, etc.
+
+- .NET Framework Class Library (FCL, Base Class Library, BCL) - thousands
+of classes built by Microsoft for every imaginable purpose.
+
+- Compilers (C# compiler, VB compiler) - turns your human readable source code into
+Microsoft Intermediate Language (MSIL, IL) and packaged into a .NET assembly
+(.exe - executable, or .dll - class library)
+
+- Many other tools and features
+
+Initial compilation to Intermediate Language, the a second compilation
+JIT - Just In Time compilation - an optimized version of the assembly for the specific
+hardware and softeware. Happens at first request on that computer.
 
