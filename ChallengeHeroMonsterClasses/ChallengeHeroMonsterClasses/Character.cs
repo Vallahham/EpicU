@@ -8,15 +8,15 @@ namespace ChallengeHeroMonsterClasses
     public class Character
     {
         public string Name { get; set; }
-        public double Health { get; set; }
-        public double DamageMaximum { get; set; }
+        public int Health { get; set; }
+        public int DamageMaximum { get; set; }
         public bool AttackBonus { get; set; }
 
-        public static int RandomNumber()
+        public int RandomNumber()
         {
             Random random = new Random();
             //Random random = new System.Random();
-            return random.Next();
+            return random.Next(DamageMaximum);
         }
 
         public int Attack()
@@ -25,24 +25,11 @@ namespace ChallengeHeroMonsterClasses
             return damage;       
         }
 
-        public double Defend(int damage)
+        public int Defend(int damage)
         {
             Health -= damage;
             return Health;
         }
-
-
-        /*
-        private static rnd = new Random();
-        public static int GetRandom()
-        {
-            return rnd.Next();
-        }
-
-    */
-
-
-
     }
 }
 
