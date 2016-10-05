@@ -21,13 +21,16 @@ namespace ChallengeHeroMonsterClasses
 
         public int Attack()
         {
-            return RandomNumber();       
+            int damage = RandomNumber();
+            return damage;       
         }
 
-        public int Damage()
+        public double Defend(int damage)
         {
-            return RandomNumber();
+            Health -= damage;
+            return Health;
         }
+
 
         /*
         private static rnd = new Random();

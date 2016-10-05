@@ -8,9 +8,18 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div style="text-align: center">
     
-        <asp:Label ID="resultLabel" runat="server"></asp:Label>
+        Opponents<br />
+        <br />
+    
+        <asp:Label ID="opponent1Label" runat="server"></asp:Label>
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V.S.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="opponent2Label" runat="server"></asp:Label>
+        <br />
+        <br />
+        <asp:Button ID="fightButton" runat="server" OnClick="fightButton_Click" Text="Fight!" />
     
     </div>
     </form>
