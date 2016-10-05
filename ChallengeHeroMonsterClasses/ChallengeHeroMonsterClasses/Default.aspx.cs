@@ -9,6 +9,8 @@ namespace ChallengeHeroMonsterClasses
 {
     public partial class Default : System.Web.UI.Page
     {
+        Character hero = new Character();
+        Character monster = new Character();
 
         String characterStats(Character temp)
         {
@@ -24,13 +26,13 @@ namespace ChallengeHeroMonsterClasses
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Character hero = new Character();
+            
             hero.Name = "Hercules";
             hero.Health = 50;
             hero.DamageMaximum = 10;
             hero.AttackBonus = false;
 
-            Character monster = new Character();
+          
             monster.Name = "Hydra";
             monster.Health = 75;
             monster.DamageMaximum = 15;
