@@ -430,3 +430,76 @@ Initial compilation to Intermediate Language, the a second compilation
 JIT - Just In Time compilation - an optimized version of the assembly for the specific
 hardware and softeware. Happens at first request on that computer.
 
+Understanding Namespaces anbd the unsing Directive (CS-ASP_040)
+-----------------------------------------------------------------------
+Namesspaces organize class names inside of class libraries or applications.
+
+You must reference class names by their full names:
+System.Text.Stringbuilder sb = new System.Text.StringBuilder();
+
+.... or, you can employ a unsing directive at the top of the code file to instruct 
+the compiler to look in those **********************
+
+StringBuilder sb = new StringBuilder();
+
+You must always do this if the code you're writing is outside of
+the namespace of the class you want to use, even if it's in the same
+project.
+
+Default namespace defined in Project Properties (right-clicking on
+Project name in Solution Explorer, select Properties...)
+
+Creating Class Libraries and Adding Reference to Assemblies (CS-ASP 041)
+------------------------------------------------------------------------
+Class Library project - creates a .dll that can be referenced in other projects.
+
+Add a Reference - the FCL is split into tiny pieces, and you must reference
+the assemblies that contain the parts of the library you want to use.
+
+Right-click project's Reference node in Solution Explorer, select Add Reference
+
+Accessibility Modifiers, Fields and Properties (CS-ASP_042)
+---------------------------------------------------------------
+http://v.gd/access
+
+Public - Class or member can be accessed by any code
+Private - Class or member can only be accessed by parent class
+Protected - Class or member can only be accessed by parent class or derived class
+Internal - Class or member can only be accessed by code inside the same assembly
+
+Classes are internal by default
+Methods and properties are private by default
+
+Encapsulation - hiding implementation behind public interfaces, reduces coupling
+increases plug-ability / reusability, maintainability, etc.
+
+private fields have two purposes:
+(1) reference to object or variable that used for internal implementation of class
+(2) hold the state of an object, backing field for public property
+
+propfull [tab] [tab]
+
+private int myField;
+property int MyProperty
+{
+  get{return myField;}                
+  set
+  {
+     if (value > 100)                   //Do not put business logic in property
+        myField = value;
+      else
+         //Tell the caller that they can't do this
+         
+   }
+}
+
+Full property definition and private fields to control
+access to private fields / state of the object.
+
+propg [tab] [tab]
+
+public int MyPropery {get; private set;}
+
+Restricts setting of property to just the class' internal implementation
+
+
