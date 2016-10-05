@@ -502,4 +502,51 @@ public int MyPropery {get; private set;}
 
 Restricts setting of property to just the class' internal implementation
 
+Creating Constructor Methods (CS-ASP_043)
+-------------------------------------------------
+Constructors are called at the moment of instantiation.
+Used to put the new instnace of the class into a valid state.
+
+public class Foo
+{
+  public Foo()
+  {
+  
+  }
+}
+
+Whether you define it or not, there's a default constructor.
+You can override the default (no input perameters) or
+overload the constructor to allow the user to set the new instance to a valid state.
+
+Naming Conventions for Identifiers (CS-ASP_044)
+----------------------------------------------------
+PascalCase - public
+camelCase - private, protected
+
+Public classes, methods and properties - PascalCase
+Private helper methods, input parameters - camelCase
+Locally scooped variables - camelCase
+Private field - camelCaswe prefixed w/ underscore: -firstName
+
+Choose long, memorable, undertandable names
+that convey meaning / intent
+
+Static vs Instance Members (CS-ASP_045)
+-----------------------------------------------
+Static Members - no instance of the class required to call the method
+
+Instance member - must create an instance w/ new keyword to call the
+methods and properties
+
+Can mix in the same class, but can't reference instance 
+members from inside of static members.
+
+Classes can be decorated w/ static keyword - all members
+must be static, can't create an instance of the class.
+
+Ex: System.Math
+
+http://v.gd/static
+
 
