@@ -553,4 +553,123 @@ Ex: System.Math
 
 http://v.gd/static
 
+Working With the List Colection (CS-ASP_046)
+----------------------------------------------
+Use Generic Collections to work with items in a strongly typed fashion.
+
+Better than arrays:
+Know the type of the item for a certainty, no casting/ converting
+Better performace inserting / removing / updating
+Collections provide more flexible options to access items in the collection.
+Allows for LINQ extension methods
+
+Many different collections - specialties
+
+"Generic Collections"
+List<T>
+Dictionary<TKey, TValue>
+T = > data type you need
+"You make a generic specific by providing a data type."
+
+List<string> - only stores strings in list (strong typed)
+List<Car> - only stores Cars in that collection
+
+// Assume I have three objects: car1, car2, car3
+List<Car> cars = new List<Car>();
+cars.Add(car1);
+cars.Add(car2);
+cars.Add(car3);
+
+int numberOfCars = cars.Count;
+Car myCar = cars.ElementAt(1); // Return 2nd car in the collection
+
+// Terminology: You access a MEMBER of a collection
+
+// LINQ queries
+
+Object Initializers (CS-ASP_047)
+------------------------------------
+Concise way to initialize a new object (or collection) with vaues.
+
+//. Didn't talk about this form:
+
+Car car1 = new Car() {Make = "BMW", Model = "528i", Year = 2010, Color = "Black"};
+
+//No local variable name for the new Car ninstance needed!
+cars.Add(new Car() {Make = "BMW", Model = "528i", Year = 2010, Color = "Black"});
+
+Collection Initializers (CS-ASP_048)
+---------------------------------------
+Shortcut to create a new instance of a genreic collection AND initialize it by
+IMMEDIATELY adding new instances of a given type.
+
+List<Car> cars = new List<CAR>()
+{
+  new Car {Make = "BMW", Model = "528i", Year = 2010, Color = "Black"},
+  new Car {Make = "BMW", Model = "745i", Year = 2005, Color = "White"},
+  new Car {Make = "BMW", Model = "528i", Year = 2010, Color = "Black"}
+ };
+ 
+ Working with the Dictionary<TKey, TValue> Collection (CS-ASP_049)
+ -----------------------------------------------------------------
+ Dictionary allows you to use a key to access a member of the collection.
+ Think: Webster's dictionary ... the word (key), then the definition (instance of a given type)
+ Key is anything meaningful in YOUR system.
+ Key must be unique.
+ 
+ TKey = > type of the key
+ TValue = > type of the value
+ 
+ Dictionary<string, Car> cars = new Dictionary<string, Car>();
+ cars.Add("V123", new Car{Make = "BMW", Model = "528i", Year = 2010, Color = "Black"});
+ cars.Add("V234", new Car{Make = "BMW", Model = "745i", Year = 2005, Color = "White"});
+ 
+ cars.ElementAt(1).Key //Return "V234"
+ cars.ElementAt(1).Value // Return the Car object in the 2nd position
+ 
+ //Better way to access Dictionary ...
+ Car v2;
+ if (cars.TryGetValue("V234" , out v2))
+ {
+  result += v2.Year;
+ }
+ 
+ //Remove
+ if (cars.Remove("V345"))
+ {
+  result += "Successfully removed car.";
+ }
+ 
+ Looping with the foreach Iteration Statement (CS-ASP_050)
+ ------------------------------------------------------------
+ More elegant way of iterating through collections.
+ 
+ Code Snippet: foreach[tab] [tab]
+ 
+ foreach (Car car in cars)
+ {
+  result += car.Make;
+ }
+ 
+ Implicitly Typed Local Variables with the var Keyword (CS-ASP_051)
+ -------------------------------------------------------------------
+ (Applies to locally scoped variable declarions)
+ Compiler is smart enought to figure out the data type when you initialize the variable.
+ Becomes increasingly important because sometimes it is difficult to know what the data
+ type is supposed to be. (LINQ)
+ 
+ int hitPoints = 0;
+ .... same as ....
+ var hitPoints = 0;
+ 
+ //Can also be applied to complex things
+ 
+ Rules:
+ 1. Must initialize the variable.
+ 2. Variable is permanently set to the implicit data type.
+ 3. Can't be used for a PUBLIC property / variable. (only for locally scoped variables)
+ 
+ 
+ 
+
 
