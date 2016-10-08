@@ -2,6 +2,10 @@
 
 # Cheat Sheet
 
+Basic
+-----------------
+Line break within text - "< br/>" with no spaces
+
 Data Types (CS-ASP_007)
 -----------------------
 Comments: // Single line..... /* Multiline */
