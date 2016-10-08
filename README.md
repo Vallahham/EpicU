@@ -4,7 +4,7 @@
 
 Basic
 -----------------
-Line break within text - "<br/>"
+Line break within text - "< br/>" with no spaces
 
 Data Types (CS-ASP_007)
 -----------------------
