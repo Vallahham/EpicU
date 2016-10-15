@@ -7,19 +7,38 @@ namespace MegaChallengeWar
 {
     public class Deck
     {
-        //public int MyProperty { get; set; }
+        public int cardsInEachSuit = 13;
 
-        public void CardID()
+        //public Array CardID[];
+
+        public enum individualCard
         {
-            for (int i = 1; i < 14; i++)
-            {
 
+        }
+
+        public individualCard[] Ind;
+
+        public void Card()
+        {
+            foreach (Suit suit in Enum.GetValues(typeof(Suit)))
+            {
+                string suitString = suit.ToString();
+
+                for (int i = 1; i <= cardsInEachSuit; i++)
+                {
+                    //i.Ind = 
+                    Guid uniqueCard = Guid.Parse(suitString + "_" + i);
+                }
             }
         }
         
-        public void Card()
+        public enum Face
         {
-
+            Ace = 1,
+            Jack = 11,
+            Queen = 12,
+            King = 13,
+            Joker = 14
         }
 
         public enum Suit
@@ -29,8 +48,6 @@ namespace MegaChallengeWar
             Clubs,
             Hearts
         }
-
-
     }
 }
 
