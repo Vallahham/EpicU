@@ -1,0 +1,10 @@
+Make a social network that you would actually want to be a part of.
+
+Requirements:
+User registration
+Authentication
+Allow users to poset something
+Allow users to react to a post
+Allow users to view other's profiles
+Alloa users to "favorite" other users
+Allow users to have a timeline displaying posts from "Favorited users"
