@@ -8,3 +8,14 @@ Allow users to react to a post
 Allow users to view other's profiles
 Alloa users to "favorite" other users
 Allow users to have a timeline displaying posts from "Favorited users"
+Must be live
+
+-Use SQL for user database
+-Authorization:  Membership roll system (web.config) Forms off (off controller)
+        -Excluding page from entire site authorization [AllowAnonymous]
+        -[Authorize] needs authorization before can access page
+        - FormsAuthenticationTicket
+        -use cookies
+
+
+
